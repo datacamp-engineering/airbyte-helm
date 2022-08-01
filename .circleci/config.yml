@@ -36,25 +36,25 @@ jobs:
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-server --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
-             git add airbyte-server-0.33.${CIRCLE_BUILD_NUM}.tgz
+             git add server-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
           name: "helm package airbyte temporal"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-temporal --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
-             git add airbyte-temporal-0.33.${CIRCLE_BUILD_NUM}.tgz
+             git add temporal-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
           name: "helm package airbyte webapp"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-webapp --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
-             git add airbyte-webapp-0.33.${CIRCLE_BUILD_NUM}.tgz
+             git add webapp-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
           name: "helm package airbyte-worker"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-worker --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
-             git add airbyte-worker-0.33.${CIRCLE_BUILD_NUM}.tgz
+             git add worker-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
           name: "commit new version"
           command: |
