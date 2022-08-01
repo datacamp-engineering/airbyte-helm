@@ -20,35 +20,35 @@ entries:
       version: 11.x.x
     - condition: airbyte-bootloader.enabled
       name: airbyte-bootloader
-      repository: https://github.com/datacamp-engineering/airbyte-helm
-      version: 0.33.19
+      repository: https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/
+      version: 0.33.21
     - condition: temporal.enabled
       name: temporal
-      repository: https://github.com/datacamp-engineering/airbyte-helm
-      version: 0.33.19
+      repository: https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/
+      version: 0.33.21
     - condition: webapp.enabled
       name: webapp
-      repository: https://github.com/datacamp-engineering/airbyte-helm
-      version: 0.33.19
+      repository: https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/
+      version: 0.33.21
     - condition: server.enabled
       name: server
-      repository: https://github.com/datacamp-engineering/airbyte-helm
-      version: 0.33.19
+      repository: https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/
+      version: 0.33.21
     - condition: worker.enabled
       name: worker
-      repository: https://github.com/datacamp-engineering/airbyte-helm
-      version: 0.33.19
+      repository: https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/
+      version: 0.33.21
     - condition: pod-sweeper.enabled
       name: pod-sweeper
-      repository: https://github.com/datacamp-engineering/airbyte-helm
-      version: 0.33.19
+      repository: https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/
+      version: 0.33.21
     description: Helm chart to deploy airbyte
     digest: 5e2442eeada581b7b76c3281a3bd11737da6e99867a654a28160535cad1d8375
     name: airbyte
     type: application
     urls:
-    - airbyte-0.33.19.tgz
-    version: 0.33.19
+    - airbyte-0.33.21.tgz
+    version: 0.33.21
   - apiVersion: v2
     appVersion: 0.39.41-alpha
     created: "2022-08-01T12:39:47.758868+01:00"

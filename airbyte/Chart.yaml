@@ -40,25 +40,25 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
   - condition: airbyte-bootloader.enabled
     name: airbyte-bootloader
-    repository: "https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/"
-    version: 0.33.21
+    repository: "https://airbytehq.github.io/helm-charts/"
+    version: 0.32.4
   - condition: temporal.enabled
     name: temporal
-    repository: "https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/"
-    version: 0.32.21
+    repository: "https://airbytehq.github.io/helm-charts/"
+    version: 0.32.4
   - condition: webapp.enabled
     name: webapp
-    repository: "https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/"
-    version: 0.32.21
+    repository: "https://airbytehq.github.io/helm-charts/"
+    version: 0.32.4
   - condition: server.enabled
     name: server
-    repository: "https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/"
-    version: 0.32.21
+    repository: "https://airbytehq.github.io/helm-charts/"
+    version: 0.32.4
   - condition: worker.enabled
     name: worker
-    repository: "https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/"
-    version: 0.32.21
+    repository: "https://airbytehq.github.io/helm-charts/"
+    version: 0.32.4
   - condition: pod-sweeper.enabled
     name: pod-sweeper
-    repository: "https://raw.githubusercontent.com/datacamp-engineering/airbyte-helm/master/"
-    version: 0.32.21
+    repository: "https://airbytehq.github.io/helm-charts/"
+    version: 0.32.4
