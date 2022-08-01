@@ -14,40 +14,52 @@ jobs:
           command: | 
              git clone git@github.com:datacamp-engineering/airbyte-helm.git
       - run:
-          name: "helm package airbyte "
+          name: "helm package airbyte"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
+             git add airbyte-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
-          name: "helm package airbyte "
+          name: "helm package airbyte bootloader"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-bootloader --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
+             git add airbyte-bootloader-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
-          name: "helm package airbyte "
+          name: "helm package airbyte pod-sweeper"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-pod-sweeper --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
+             git add airbyte-pod-sweeper-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
-          name: "helm package airbyte "
+          name: "helm package airbyte server"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-server --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
+             git add airbyte-server-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
-          name: "helm package airbyte "
+          name: "helm package airbyte temporal"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-temporal --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
+             git add airbyte-temporal-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
-          name: "helm package airbyte "
+          name: "helm package airbyte webapp"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-webapp --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
+             git add airbyte-webapp-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
-          name: "helm package airbyte "
+          name: "helm package airbyte-worker"
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-worker --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
+             git add airbyte-worker-0.33.${CIRCLE_BUILD_NUM}.tgz
+      - run:
+          name: "commit new version"
+          command: |
+             git commit -m "commit new version 0.33.${CIRCLE_BUILD_NUM}"
+             git push -u origin master
 workflows:
   version: 2
   build:
