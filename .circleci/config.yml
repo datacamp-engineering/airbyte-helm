@@ -30,7 +30,7 @@ jobs:
           command: | 
              cd ~/project/$CIRCLE_PROJECT_REPONAME
              helm3 package airbyte-pod-sweeper --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
-             git add airbyte-pod-sweeper-0.33.${CIRCLE_BUILD_NUM}.tgz
+             git add pod-sweeper-0.33.${CIRCLE_BUILD_NUM}.tgz
       - run:
           name: "helm package airbyte server"
           command: | 
