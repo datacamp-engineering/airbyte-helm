@@ -17,31 +17,31 @@ jobs:
       - run:
           name: "helm package airbyte "
           command: | 
-             helm package /Users/james.harris/Documents/code/airbyte-helm/airbyte --dependency-update
+             helm package airbyte --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
       - run:
           name: "helm package airbyte "
           command: | 
-             helm package /Users/james.harris/Documents/code/airbyte-helm/airbyte-bootloader --dependency-update
+             helm package airbyte-bootloader --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
       - run:
           name: "helm package airbyte "
           command: | 
-             helm package /Users/james.harris/Documents/code/airbyte-helm/airbyte-pod-sweeper --dependency-update
+             helm package airbyte-pod-sweeper --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
       - run:
           name: "helm package airbyte "
           command: | 
-             helm package /Users/james.harris/Documents/code/airbyte-helm/airbyte-server --dependency-update
+             helm package airbyte-server --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
       - run:
           name: "helm package airbyte "
           command: | 
-             helm package /Users/james.harris/Documents/code/airbyte-helm/airbyte-temporal --dependency-update
+             helm package airbyte-temporal --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
       - run:
           name: "helm package airbyte "
           command: | 
-             helm package /Users/james.harris/Documents/code/airbyte-helm/airbyte-webapp --dependency-update
+             helm package airbyte-webapp --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
       - run:
           name: "helm package airbyte "
           command: | 
-             helm package /Users/james.harris/Documents/code/airbyte-helm/airbyte-worker --dependency-update
+             helm package airbyte-worker --dependency-update --version 0.33.${CIRCLE_BUILD_NUM}
 workflows:
   version: 2
   build:
